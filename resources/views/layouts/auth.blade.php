@@ -29,7 +29,7 @@
     <!-- select2 -->
     <link href="{{ asset('plugins/select2/css/select2.min.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/auth.css') }}" rel="stylesheet">
     <link href="{{ asset('css/btn.css') }}" rel="stylesheet">
 
 
