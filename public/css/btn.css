@@ -1,0 +1,10 @@
+.btn-primary-custom {
+    width: 113px;
+    border-radius: 0;
+    background: #232530;
+    border: navajowhite;
+    font-size: 12px;
+    /* font-weight: bold; */
+    padding: 10px;
+    letter-spacing: 2.2px;
+}
