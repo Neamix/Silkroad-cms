@@ -6,9 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8">
-                        <div class="row-title">
-                            {{ __('index.latest-news') }}
-                        </div>
+                        
                     </div>
                     @if($news->count() > 4)
                     <div class="col-sm-4">

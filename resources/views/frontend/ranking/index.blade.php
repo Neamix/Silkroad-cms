@@ -1,7 +1,7 @@
 @extends('theme::layouts.app', ['alias' => 'Ranking'])
 @section('theme::title', __('seo.ranking.index', ['name' => Str::ucfirst($mode)]))
 @section('theme::content')
-    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 rank">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="result-area">
-                        {!! $dataTable->table(['class' => 'table table-hover table-bordered table-striped w-100'], true) !!}
+                        {!! $dataTable->table(['class' => 'table table-hover table-border-less table-striped w-100'], true) !!}
                     </div>
                 </div>
             </div>

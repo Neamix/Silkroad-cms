@@ -31,11 +31,17 @@
 
     <link href="{{ mix('css/sidenav.css') }}" rel="stylesheet">
 
+    <link href="{{ mix('css/header.css') }}" rel="stylesheet">
+
+    <link href="{{ mix('css/pages.css') }}" rel="stylesheet">
+
+
     @stack('theme::css')
 </head>
 <body dir="{{( Session::get('locale') === 'ar' ? 'rtl' : 'ltr' )}}">
 <div id="app">
     @include('theme::layouts.navbar')
+    @include('theme::layouts.header')
     <main role="main" class="container">
         <div class="row mt-5">
             @yield('theme::content')

@@ -1,0 +1,10 @@
+
+.rank table tr {
+    background-color: #333;
+}
+
+.rank table tr,
+.rank table th,
+.rank table td{
+    border: none;
+}

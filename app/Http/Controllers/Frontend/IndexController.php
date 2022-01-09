@@ -30,6 +30,7 @@ class IndexController extends Controller
         $news = News::where('published_at', '<=', Carbon::Now())
             ->orderBy('published_at', 'DESC')->with('image')->take(4)->get();
         return view('theme::index', [
+            'page' => 'Our Latest News',
             'news' => $news
         ]);
     }
@@ -42,6 +43,7 @@ class IndexController extends Controller
         $downloads = Download::orderBy('name', 'asc')->get();
 
         return view('theme::frontend.other.downloads', [
+            'page' => 'Downloads',
             'downloads' => $downloads
         ]);
     }
@@ -53,6 +55,7 @@ class IndexController extends Controller
     {
         $rules = Rules::all()->first();
         return view('theme::frontend.other.rules', [
+            'page'  => 'Rules',
             'rules' => $rules
         ]);
     }
@@ -63,6 +66,7 @@ class IndexController extends Controller
     public function serverInformation()
     {
         return view('theme::frontend.other.serverinformation', [
+            'page' => 'Server Information',
             'information' => ServerInformation::orderBy('order', 'ASC')->get()
         ]);
     }

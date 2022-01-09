@@ -22,7 +22,10 @@ class RankingController extends Controller
     public function charname(CharacterRankingDataTable $dataTable)
     {
         if (config('siteSettings.char_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-charname')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-charname')
+            ]);
         }
         return abort(404);
     }
