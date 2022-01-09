@@ -29,6 +29,8 @@
     <!-- select2 -->
     <link href="{{ asset('plugins/select2/css/select2.min.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('css/sidenav.css') }}" rel="stylesheet">
+
     @stack('theme::css')
 </head>
 <body dir="{{( Session::get('locale') === 'ar' ? 'rtl' : 'ltr' )}}">

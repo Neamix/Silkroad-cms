@@ -73,8 +73,6 @@
                 </div>
             </li>
         </ul>
-    
-        </div>
         <ul class="list-group list-unstyled small pt-3">
             @if(config('siteSettings.sro_ip_limit'))
             <li class="pb-1">
@@ -97,7 +95,7 @@
             </li>
             @endif
         </ul>
-    
+        </div>
     </div>
     @include('theme::layouts.supportersonline')
 
