@@ -36,10 +36,10 @@
     @include('theme::layouts.navbar')
     <main role="main" class="container">
         <div class="row mt-5">
+            @yield('theme::content')
             @section('theme::sidebar')
                 @include('theme::layouts.sidebar')
             @show
-            @yield('theme::content')
         </div>
     </main>
     @include('theme::layouts.footer')
