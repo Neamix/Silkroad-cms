@@ -29,3 +29,22 @@
     border: none !important;
     font-size: 13px;
 }
+
+.sidenav input {
+    border-radius: 0;
+    background: #333;
+    border: none;
+    font-size: 13px;
+}
+
+.sidenav form button {
+    border-radius: 0;
+    width: 100%;
+    background: #686AFF;
+    border: none;
+    font-size: 13px;
+}
+
+.sidenav form label {
+    font-size: 12px;
+}
