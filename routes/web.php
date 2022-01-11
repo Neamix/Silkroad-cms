@@ -10,7 +10,7 @@ Auth::routes();
 
 //get Images
 Route::get('images/normal/{image?}', function ($image = null) {
-    return Images::GetImage($image);
+     Images::GetImage($image);
 })->name('images.image')->where(['image' => '(.*)']);
 
 //get fort Images
@@ -213,7 +213,7 @@ Route::group(['prefix' => 'auctions-house'], static function () {
 });
 
 // Backend Routes
-Route::group(['prefix' => 'backend', 'middleware' => ['role:administrator']], static function () {
+Route::group(['prefix' => 'backend'], static function () {
     Route::get('/', 'Backend\BackendController@index')->name('index-backend');
 
     // SoX count filter

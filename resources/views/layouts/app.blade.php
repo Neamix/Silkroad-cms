@@ -35,6 +35,9 @@
 
     <link href="{{ mix('css/pages.css') }}" rel="stylesheet">
 
+    <link href="{{ mix('css/btn.css') }}" rel="stylesheet">
+
+
 
     @stack('theme::css')
 </head>

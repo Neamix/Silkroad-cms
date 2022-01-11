@@ -5907,10 +5907,7 @@ input[type=submit].btn-block {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
     background-clip: border-box;
-    border: 1px solid #e3e6f0;
-    border-radius: .35rem
 }
 
 .card>hr {
@@ -5956,10 +5953,11 @@ input[type=submit].btn-block {
 }
 
 .card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: #f8f9fc;
-    border-bottom: 1px solid #e3e6f0
+    background: #171719;
+    border-radius: 0;
+    font-size: 13px;
+    padding: 10px 10px;
+    border: none;
 }
 
 .card-header:first-child {
@@ -6742,7 +6740,6 @@ a.badge-dark:focus {
     display: block;
     padding: .75rem 1.25rem;
     margin-bottom: -1px;
-    background-color: #fff;
     border: 1px solid rgba(0, 0, 0, .125)
 }
 
@@ -6767,8 +6764,8 @@ a.badge-dark:focus {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #28c;
-    border-color: #28c
+    background-color: #333;
+    border-radius: 0px;
 }
 
 .list-group-horizontal {
@@ -22049,4 +22046,27 @@ div.image span.plus {
 .image {
     background-repeat: no-repeat !important;
     background-size: 34px 34px !important
+}
+
+input,
+select {
+    border-radius: 0 !important;
+    background: #333 !important;
+    border: none !important;
+    font-size: 13px !important;
+    color: #fff !important;
+}
+
+table {
+    border: none !important;
+}
+
+table tr {
+    background-color: #333;
+}
+
+table tr,
+table th,
+table td{
+    border: none !important;
 }

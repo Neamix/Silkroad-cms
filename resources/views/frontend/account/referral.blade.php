@@ -8,10 +8,6 @@
     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
         <div class="container">
             <div class="row justify-content-center">
-                <h1 class="col-md-12">
-                    {{ __('home.ref.title') }}
-                </h1>
-
                 <div class="col-md-12">
                     <h3>
                         {{ __('home.ref.signature') }}

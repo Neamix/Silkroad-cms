@@ -41,11 +41,41 @@ nav ul:nth-child(2) li a {
     border-radius: 40px;
 }
 
-nav ul:nth-child(2) li:nth-child(1) a {
+nav .login-lang-menu li.nav-auth:nth-child(1) a {
     background: #686AFF;
 }
 
-nav ul:nth-child(2) li:nth-child(2) a {
+nav .login-lang-menu li.nav-auth:nth-child(2) a {
     background: #f7f7f7 !important;
     color: #000;
+}
+
+nav .navbar-toggler .menu-toggler {
+    font-size: 15px;
+}
+
+nav  .navbar-toggler:focus,
+nav .navbar-toggler:active {
+    outline:  none;
+}
+
+.dropdown-menu {
+    width: 100%;
+    background: #333;
+    border: none;
+    border-radius: 0px;
+    min-width: 174px;
+}
+
+.dropdown-menu .dropdown-item {
+    margin: 0;
+    background: transparent;
+    border: none;
+}
+
+@media screen and (max-width:768px) {
+    nav .navbar-collapse {
+        background: #333;
+        padding: 10px;
+    }
 }

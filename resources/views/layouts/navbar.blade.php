@@ -6,7 +6,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="{{ __('navbar.toggle') }}">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon d-block">
+                <i class="fas fa-bars text-white  menu-toggler"></i>
+            </span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -60,7 +62,7 @@
                     </div>
                 </li>
             </ul>
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto login-lang-menu">
                 @if(count(config('language')) > 1)
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -82,11 +84,11 @@
                 @endif
 
                 @guest
-                    <li class="nav-item">
+                    <li class="nav-item nav-auth">
                         <a class="nav-link{{(isset($alias) && $alias == 'Login') ? ' active' : ''}}" href="{{ route('login') }}">{{ __('navbar.login') }}</a>
                     </li>
                     @if (Route::has('register'))
-                        <li class="nav-item">
+                        <li class="nav-item nav-auth">
                             <a class="nav-link{{(isset($alias) && $alias == 'register') ? ' active' : ''}}" href="{{ route('register') }}">{{ __('navbar.register') }}</a>
                         </li>
                     @endif
@@ -100,7 +102,6 @@
                             <a class="dropdown-item{{(isset($alias) && $alias == 'Account') ? ' active' : ''}}" href="{{ route('home') }}">
                                 {{ __('navbar.home') }}
                             </a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 {{ __('navbar.logout') }}

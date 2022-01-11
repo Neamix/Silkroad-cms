@@ -36,7 +36,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        $newsImages = Image::where('model', News::class)->orderByDesc('id')->get();
+        $newsImages = Image::all();
         return view('theme::backend.news.create', [
             'images' => $newsImages
         ]);

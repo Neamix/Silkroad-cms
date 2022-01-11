@@ -34,6 +34,7 @@ class DonationsController extends Controller
         $donationMethods = DonationMethods::all();
 
         return view('backend.donations.index', [
+            'page' => 'Donation',
             'donationMethods' => $donationMethods
         ]);
     }
@@ -102,6 +103,7 @@ class DonationsController extends Controller
         $paypal = DonationPaypals::all();
 
         return view('backend.donations.paypal', [
+            'page' => 'Paypal',
             'method' => $method,
             'paypal' => $paypal
         ]);
@@ -155,6 +157,7 @@ class DonationsController extends Controller
         $stripe = DonationStripes::all();
 
         return view('backend.donations.stripe', [
+            'page' => 'Stripe',
             'method' => $method,
             'stripe' => $stripe
         ]);

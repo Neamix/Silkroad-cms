@@ -41,7 +41,9 @@ class AccountController extends Controller
      */
     public function index()
     {
-        return view('theme::home');
+        return view('theme::home')->with([
+            'page' => 'Dashboard'
+        ]);
     }
 
     /**
@@ -54,6 +56,7 @@ class AccountController extends Controller
         $account = $user->getUserCharData();
 
         return view('theme::frontend.account.charslist', [
+            'page' => 'Charlist',
             'account' => $account
         ]);
     }
@@ -69,6 +72,7 @@ class AccountController extends Controller
             ->firstOrFail();
 
         return view('theme::frontend.account.settings', [
+            'page' => 'Settings',
             'account' => $account
         ]);
     }
@@ -90,6 +94,7 @@ class AccountController extends Controller
             $signature = null;
         }
         return $dataTable->render('theme::frontend.account.referral', [
+            'page' => 'Referral',
             'account' => $account,
             'signature' => $signature
         ]);
@@ -106,6 +111,7 @@ class AccountController extends Controller
             ->firstOrFail();
 
         return $dataTable->render('theme::frontend.account.voucher', [
+            'page' => 'Voucher',
             'account' => $account
         ]);
     }

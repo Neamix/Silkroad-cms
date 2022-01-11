@@ -9,9 +9,6 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <h1>
-                        {{ __('home.title') }}
-                    </h1>
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="box box-small-icon-alt">

@@ -4,6 +4,7 @@ namespace App;
 
 use App\Http\Model\SRO\Account\SkSilk;
 use App\Http\Model\SRO\Account\TbUser;
+use Auth;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;

@@ -20,7 +20,7 @@
                 </div>
                 <div class="row">
                     @forelse($news as $newsData)
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="col-md-12">
                             <div class="post-box"
                                  style="background-image: url('{{ route('images.image', ['image' => $newsData->image->filename]) }}');">
                                 <div class="post-link">

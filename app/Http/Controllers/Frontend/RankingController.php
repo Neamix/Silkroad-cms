@@ -37,7 +37,10 @@ class RankingController extends Controller
     public function guild(GuildsRankingDataTable $dataTable)
     {
         if (config('siteSettings.guild_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-guild')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-guild')
+            ]);
         }
         return abort(404);
     }
@@ -49,7 +52,10 @@ class RankingController extends Controller
     public function job(JobRankingDataTable $dataTable)
     {
         if (config('siteSettings.job_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-job')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-job')
+            ]);
         }
         return abort(404);
     }
@@ -61,7 +67,10 @@ class RankingController extends Controller
     public function trader(TraderRankingDataTable $dataTable)
     {
         if (config('siteSettings.trader_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-trader')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-trader')
+            ]);
         }
         return abort(404);
     }
@@ -73,7 +82,10 @@ class RankingController extends Controller
     public function hunter(HunterRankingDataTable $dataTable)
     {
         if (config('siteSettings.hunter_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-hunter')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-hunter')
+            ]);
         }
         return abort(404);
     }
@@ -85,7 +97,10 @@ class RankingController extends Controller
     public function thief(ThiefRankingDataTable $dataTable)
     {
         if (config('siteSettings.thief_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-thief')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-thief')
+            ]);
         }
         return abort(404);
     }
@@ -97,7 +112,10 @@ class RankingController extends Controller
     public function unique(UniqueRankingDataTable $dataTable)
     {
         if (config('siteSettings.unique_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-unique')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-unique')
+            ]);
         }
         return abort(404);
     }
@@ -109,7 +127,10 @@ class RankingController extends Controller
     public function FreePvp(FreePvpRankingDataTable $dataTable)
     {
         if (config('siteSettings.free_pvp_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-free-pvp')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-free-pvp')
+            ]);
         }
         return abort(404);
     }
@@ -121,7 +142,10 @@ class RankingController extends Controller
     public function JobPvp(JobPvpRankingDataTable $dataTable)
     {
         if (config('siteSettings.job_pvp_ranking', true)) {
-            return $dataTable->render('theme::frontend.ranking.index', ['mode' => config('ranking.search-job-pvp')]);
+            return $dataTable->render('theme::frontend.ranking.index', [
+                'page' => 'Rank',
+                'mode' => config('ranking.search-job-pvp')
+            ]);
         }
         return abort(404);
     }

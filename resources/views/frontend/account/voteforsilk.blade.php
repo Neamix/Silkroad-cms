@@ -8,9 +8,6 @@
     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
         <div class="container">
             <div class="row">
-                <h1 class="col-md-12">
-                    {{ __('home.voteforsilk.title') }}
-                </h1>
                 @forelse($data as $vote)
                     @if($vote->active === 1)
                         <div class="col-6 col-md-6 col-sm-12 col-xs-12">

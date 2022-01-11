@@ -19,7 +19,7 @@ class DiscordController extends Controller
      */
     public function __construct()
     {
-        $this->setDiscordServerId(config('siteSettings.discord_id', '674395399011827712'));
+        $this->setDiscordServerId(config('siteSettings.discord_id', '927319447096688640'));
     }
 
     /**
@@ -31,19 +31,17 @@ class DiscordController extends Controller
         $seconds = 60 * 60; // 1 hour
 
         if($this->getDiscordServerId()) {
-            $discordFetch = Cache::remember('discordFetch', $seconds, function () {
-                $response = @file_get_contents(
-                    'https://discordapp.com/api/guilds/' .
-                    $this->getDiscordServerId() .
-                    '/widget.json'
-                );
-                if($response === FALSE){
-                	// Widget not activated
-                	// or Channel not found
-                	return null;
-                }
-                return json_decode($response, true);
-            });
+            $response = @file_get_contents(
+                'https://discord.com/api/guilds/' .
+                $this->getDiscordServerId() .
+                '/widget.json'
+            );
+            if($response === FALSE){
+                // Widget not activated
+                // or Channel not found
+                return null;
+            }
+            return json_decode($response, true);
         } else {
             $discordFetch = null;
         }
